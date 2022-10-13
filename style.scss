@@ -1,0 +1,91 @@
+%flexcenter{display: flex;
+align-items: center;
+justify-content: center;}
+
+%shadow{box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);}
+
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+
+body{margin: 0px;
+padding: 0px;
+font-family: 'Roboto';}
+
+/* header */
+header{
+    @extend %flexcenter;
+    font-family:'Shrikhand';
+}
+
+/* localisation */
+.localisation{background-color: #f2f2f2;
+    width: 100%
+}
+
+.localisation_conteneur{@extend %flexcenter;
+    font-size: 18px;
+    color: #676767;
+}
+
+.localisation_conteneur i{padding-right: 10px;}
+main{@extend %flexcenter;
+flex-direction: column;}
+
+/* présentation */
+.bloc_acceuil{background: #fafafa;
+width: 100%;}
+
+.acceuil_conteneur{@extend %flexcenter;
+flex-direction: column;
+padding: 30px;
+padding-bottom: 40px;}
+
+.acceuil_bouton button{border: 1px solid;
+border-radius: 40px;
+height: 50px;
+width: 200px;
+background: linear-gradient($secondary, $primary);
+color: white;
+font-size: 14px;
+font-weight: bold;
+
+  &:hover{cursor: pointer;
+    opacity: 0.8;}
+}
+
+/* fonctionnement */
+.fonctionnement{width: 100%}
+
+.fonctionnement_titre{margin-left: 20px}
+
+.fonctionnement_step{display: flex;
+    align-items: center;
+    border: 1px solid #f2f2f2;
+    width: 100%;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    @extend %shadow;
+    background: #f4f4f4;
+
+    &:hover{cursor: pointer;
+    background: lighten(#f4f4f4, 20%)}
+}
+
+.fonctionnement_icone, .fonctionnement_numero{@extend %flexcenter;
+}
+
+.fonctionnement_numero{border: 1px solid #f2f2f2;
+height: 20px;
+width: 20px;
+margin-left: -10px;
+border-radius: 100%;
+background-color: $primary;
+color: white;}
+
+.fonctionnement_icone{margin-right: 10px;
+margin-left: 10px;
+color: #676767;}
+
+/* restaurants */

@@ -5,10 +5,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/decccbbdb1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <!--Liens pour police-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
          <header>
-            <h1>Ohmyfood</h1>
+            <h1 class="logo">ohmyfood</h1>
          </header>
 
          <main>
@@ -35,19 +43,19 @@
                 <div class="fonctionnement_conteneur">
                     <div class="fonctionnement_titre"><h2>Fonctionnement</h2></div>
                     <div class="fonctionnement_etapes">
-                        <div class="fonctionnement_1">
+                        <div class="fonctionnement_step">
                             <div class="fonctionnement_numero">1</div>
                             <div class="fonctionnement_icone"><i class="fa-solid fa-mobile-screen-button"></i></div>
                             <p class="fonctionnement_texte">Choisissez un restaurant</p>
                         </div>
 
-                        <div class="fonctionnement_2">
+                        <div class="fonctionnement_step">
                             <div class="fonctionnement_numero">2</div>
                             <div class="fonctionnement_icone"><i class="fa-solid fa-list-ul"></i></div>
                             <p class="fonctionnement_texte">Composez votre menu</p>
                         </div>
 
-                        <div class="fonctionnement_3">
+                        <div class="fonctionnement_step">
                             <div class="fonctionnement_numero">3</div>
                             <div class="fonctionnement_icone"><i class="fa-solid fa-store"></i></div>
                             <p class="fonctionnement_texte">Dégustez au restaurant</p>
@@ -60,41 +68,53 @@
                 <div class="restaurants_conteneur">
                     <div class="restaurants_titre"><h2>Restaurants</h2></div>
                     <div class="restaurants_liste">
-                        <div class="restaurant_palette">
-                            <div class="restaurant_image"><img src="images/restaurant1.jpg" alt="Restaurant la palette du goût"></div>
+                        <a href="la_palette_du_gout.html">
+                         <div class="restaurant_palette">
+                            <div class="restaurant_image"><img src="images/restaurant1.jpg" alt="Restaurant la palette du goût">
+                             <div class="restaurant_nouveau"><p>Nouveau</p></div>
+                            </div>
                             <div class="restaurant_texte">
                                 <div class="restaurant_nom">La palette du goût</div>
                                 <div class="restaurant_ville">Ménilmontant</div>
                             </div>
                             <div class="restaurant_coeur"><i class="fa-regular fa-heart"></i></div>  
-                        </div>
-
-                        <div class="restaurant_note">
-                            <div class="restaurant_image"><img src="images/restaurant2.jpg" alt="Restaurant la palette du goût"></div>
+                         </div>
+                        </a>
+                        
+                        <a href="la_note_enchantee.html">
+                         <div class="restaurant_note">
+                            <div class="restaurant_image"><img src="images/restaurant2.jpg" alt="Restaurant la palette du goût">
+                                <div class="restaurant_nouveau"><p>Nouveau</p></div>
+                            </div>
                             <div class="restaurant_texte">
                                 <div class="restaurant_nom">La note enchantée</div>
                                 <div class="restaurant_ville">Charonne</div>
                             </div>
                             <div class="restaurant_coeur"><i class="fa-regular fa-heart"></i></div>  
-                        </div>
+                         </div>
+                        </a>
 
-                        <div class="restaurant_francaise">
+                        <a href="a_la_francaise.html">
+                         <div class="restaurant_francaise">
                             <div class="restaurant_image"><img src="images/restaurant3.jpg" alt="Restaurant la palette du goût"></div>
                             <div class="restaurant_texte">
                                 <div class="restaurant_nom">A la française</div>
                                 <div class="restaurant_ville">Cité Rouge</div>
                             </div>
                             <div class="restaurant_coeur"><i class="fa-regular fa-heart"></i></div>  
-                        </div>
+                         </div>
+                        </a>
 
-                        <div class="restaurant_delice">
+                        <a href="le_delice_des_sens.html">
+                         <div class="restaurant_delice">
                             <div class="restaurant_image"><img src="images/restaurant4.jpg" alt="Restaurant la palette du goût"></div>
                             <div class="restaurant_texte">
                                 <div class="restaurant_nom">Le délice des sens</div>
                                 <div class="restaurant_ville">Folie-Méricourt</div>
                             </div>
                             <div class="restaurant_coeur"><i class="fa-regular fa-heart"></i></div>  
-                        </div>
+                         </div>
+                        </a>
                     </div>
                 </div>
             </section>
