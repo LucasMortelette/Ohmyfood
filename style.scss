@@ -11,7 +11,161 @@ $tertiary: #99E2D0;
 body{margin: 0px;
 padding: 0px;
 font-family: 'Roboto';}
+/* loader */
+.loader{position: fixed;
+height: 100%;
+width: 100%;
+@extend %flexcenter;
+background-color: rgba(#f2f2f2, 0.9);
+animation: fade 10s both;
+}
 
+ .point_1{
+	-webkit-animation: bounce-top 0.9s both;
+	        animation: bounce-top 0.9s both;
+            animation-delay: 0.1s;
+            animation-duration: 2s;
+}
+
+.point_2{
+	-webkit-animation: bounce-top 0.9s both;
+	        animation: bounce-top 0.9s both;
+            animation-delay: 0.2s;
+            animation-duration: 2s;
+}
+
+.point_3{
+	-webkit-animation: bounce-top 0.9s both;
+	        animation: bounce-top 0.9s both;
+            animation-delay: 0.3s;
+            animation-duration: 2s;
+}
+ @-webkit-keyframes bounce-top {
+    0% {
+      -webkit-transform: translateY(-45px);
+              transform: translateY(-45px);
+              -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    40% {
+      -webkit-transform: translateY(-24px);
+              transform: translateY(-24px);
+              -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    65% {
+      -webkit-transform: translateY(-12px);
+              transform: translateY(-12px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    82% {
+      -webkit-transform: translateY(-6px);
+              transform: translateY(-6px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    93% {
+      -webkit-transform: translateY(-4px);
+              transform: translateY(-4px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
+  @keyframes bounce-top {
+    0% {
+      -webkit-transform: translateY(-45px);
+              transform: translateY(-45px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    40% {
+      -webkit-transform: translateY(-24px);
+              transform: translateY(-24px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    65% {
+      -webkit-transform: translateY(-12px);
+              transform: translateY(-12px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    82% {
+      -webkit-transform: translateY(-6px);
+              transform: translateY(-6px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    93% {
+      -webkit-transform: translateY(-4px);
+              transform: translateY(-4px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
+
+@keyframes fade{
+    0%{opacity: 1;
+    z-index: 20;}
+    80%{opacity: 0.8;}
+    90%{opacity: 0.7;}
+    100%{opacity: 0;
+    z-index: -50;}
+}
+
+.loader_conteneur{@extend %flexcenter;
+flex-flow: row wrap;
+position: fixed;}
+
+.point_1, .point_2, .point_3{height: 20px;
+    width: 20px;
+border-radius: 50%;
+margin-right: 15px;}
+
+.point_1{background-color: $primary;}
+.point_2{background-color: $secondary;}
+.point_3{background-color: $tertiary;}
 /* header */
 header{
     @extend %flexcenter;
