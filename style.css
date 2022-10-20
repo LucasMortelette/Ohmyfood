@@ -372,15 +372,20 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-.fa-heart {
-  font-size: 30px;
-  font-weight: lighter;
-}
-.fa-heart:hover {
+.restaurant_coeur .coeur_rempli {
+  fill: url(#degrade);
   opacity: 0;
-  transition: 0.5s;
+}
+
+.restaurant_coeur .coeur_vide {
+  fill: none;
+  stroke: black;
+  stroke-width: 40px;
+  overflow: visible;
+  position: absolute;
 }
 
 /* footer */
