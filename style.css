@@ -338,6 +338,7 @@ main {
   border-radius: 20px;
   display: flex;
   flex-flow: column wrap;
+  background-color: white;
 }
 .restaurant_choix:hover {
   transform: scale(1.02);
@@ -377,15 +378,18 @@ img {
 
 .restaurant_coeur .coeur_rempli {
   fill: url(#degrade);
-  opacity: 0;
 }
 
 .restaurant_coeur .coeur_vide {
-  fill: none;
+  fill: white;
   stroke: black;
   stroke-width: 40px;
   overflow: visible;
   position: absolute;
+}
+.restaurant_coeur .coeur_vide:hover {
+  opacity: 0;
+  transition: 0.5s;
 }
 
 /* footer */

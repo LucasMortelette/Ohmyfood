@@ -288,6 +288,7 @@ border-radius: 20px;
 display: flex;
 flex-flow: column wrap;
 @extend %shadow;
+background-color: white;
 
 &:hover{transform: scale(1.02);
 box-shadow: 0px 0px 10px $primary;
@@ -317,12 +318,14 @@ justify-content: center;
 position: relative;}
 
 .restaurant_coeur .coeur_rempli{fill: url(#degrade);
-opacity: 0;}
-.restaurant_coeur .coeur_vide{fill: none;
+}
+.restaurant_coeur .coeur_vide{fill: white;
 stroke:black;
 stroke-width: 40px;
 overflow: visible;
-position: absolute;}
+position: absolute;
+&:hover{opacity: 0;
+transition: 0.5s;}}
 
 
 /* footer */

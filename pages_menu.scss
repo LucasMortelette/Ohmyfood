@@ -35,39 +35,67 @@ object-fit: cover;}
 .menu{background-color: #f2f2f2;
 border-radius: 50px 50px 0px 0px;
 padding: 20px;
+padding-top: 0px;
 position: relative;}
 
 .bloc_menu{@extend %flexcenter;
-flex-direction: column;}
+flex-direction: column;
+width: 100%;}
+
+.menu_entrees, .menu_plats, .menu_desserts{width: 95%;}
 
 
 .menu_titre{display: flex;
+    justify-content: space-between;
 font-family: 'Shrikhand';
 }
 
-.menu_coeur{position: absolute;
-right: 30px;
-top: 30px;
-font-size: 35px;}
+.menu_coeur{width: 30%;
+    display: flex;
+align-items: center;
+justify-content: flex-end;
+position: relative;
+margin-right: 20px;}
+
+.menu_coeur .coeur_rempli{fill: url(#degrade);
+}
+.menu_coeur .coeur_vide{fill: #f2f2f2;
+stroke:black;
+stroke-width: 40px;
+overflow: visible;
+position: absolute;
+&:hover{opacity: 0;
+transition: 0.5s;
+cursor: pointer;}}
+
 
 .menu_categ{text-transform: uppercase;
     font-size: 20px;
     width: 60px;
-border-bottom: 4px solid $tertiary;}
+border-bottom: 4px solid $tertiary;
+margin-top: 40px;}
 
 .entrees, .plats, .desserts{@extend %shadow;
+    width: 100%;
 border-radius: 20px;
 display: flex;
-padding: 0px 10px 0px 10px;
-margin-bottom: 10px;
-margin-top: 10px;
+padding: 0px 0px 0px 10px;
+margin-bottom: 20px;
+margin-top: 20px;
+animation: apparition 2s both;
+animation-delay: 0.5s;
 }
 
 .plat_prix{display: flex;
-width: 100%;}
+    width: 100%;
+margin-left: 15px;
+padding-top: 5px;}
 
-.plat{width: 80%;}
-.prix{width: 20%;}
+.plat{width: 90%;}
+.prix{width: 10%;
+@extend %flexcenter;
+font-weight: bold;
+margin-top: -5px;}
 
 .menu h3{margin-bottom: 0px;
     margin-top: 10px;
@@ -75,6 +103,21 @@ width: 100%;}
 }
 
 .menu p{margin-top: 5px;}
+
+.icone_check{background-color: $tertiary;
+    border-radius: 0px 15px 15px 0px;
+    height: 100px;
+    width: 50px;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    display: none;
+
+
+	&:hover{-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 2s;}
+}
 
 /* bouton */
 button{border: 1px solid;
@@ -117,3 +160,31 @@ footer{background-color: #373636;
     &:hover{text-decoration: underline;
     cursor: pointer;}
     }
+
+    @keyframes apparition{
+        0%{opacity: 0;}
+        100%{opacity: 1;
+        transform: translateY(-10px);}
+    }
+
+@-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+  }
+  
