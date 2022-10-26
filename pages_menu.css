@@ -110,39 +110,55 @@ header a {
           animation: apparition 2s both;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+  background-color: white;
 }
 .entrees:hover, .plats:hover, .desserts:hover {
   cursor: pointer;
 }
 .entrees:hover > .icone_check, .plats:hover > .icone_check, .desserts:hover > .icone_check {
-  -webkit-animation: scale-up-hor-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: scale-up-hor-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: scale-up-hor-right 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-hor-right 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 .entrees:hover > .icone_check > .fa-circle-check, .plats:hover > .icone_check > .fa-circle-check, .desserts:hover > .icone_check > .fa-circle-check {
   -webkit-animation: rotate-90-cw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: rotate-90-cw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .entrees:hover > .plat_prix > .prix, .plats:hover > .plat_prix > .prix, .desserts:hover > .plat_prix > .prix {
-  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+}
+.entrees:hover > .plat_prix > .plat, .plats:hover > .plat_prix > .plat, .desserts:hover > .plat_prix > .plat {
+  width: calc(90% - 100px);
+  transition: 0.6s;
 }
 
 .plat_prix {
   display: flex;
   width: 100%;
-  margin-left: 15px;
   padding-top: 5px;
 }
 
 .plat {
   width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+.plat h3, .plat p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .prix {
-  width: 10%;
+  width: 60px;
+  justify-self: flex-end;
   font-weight: bold;
+  padding-right: 20px;
+  padding-left: 7px;
   margin-top: -5px;
-  padding-right: 15px;
 }
 
 .menu h3 {
@@ -195,6 +211,9 @@ footer {
 
 .footer_titre a {
   font-family: "Shrikhand";
+}
+.footer_titre a:hover {
+  text-decoration: none;
 }
 
 .footer_titre {
@@ -258,22 +277,6 @@ footer h3:hover {
     transform: translateY(-10px);
   }
 }
-@-webkit-keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50px);
-  }
-}
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50px);
-  }
-}
 @-webkit-keyframes scale-up-hor-right {
   0% {
     transform: scaleX(0.4);
@@ -312,16 +315,36 @@ footer h3:hover {
 }
 /* responsive */
 @media screen and (min-width: 1100px) {
+  .banniere img {
+    height: 350px;
+  }
+  body {
+    position: relative;
+    width: 100%;
+  }
+  .menu {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .bloc_menu {
     display: grid;
     grid-template-rows: 1fr 100px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 30px;
     position: relative;
   }
   .commander {
     grid-column-start: 2;
     justify-self: center;
     align-self: center;
+  }
+  .footer_liens {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+  .footer_lien1, .footer_lien2, .footer_lien3, .footer_lien4 {
+    margin-right: 14px;
   }
 }/*# sourceMappingURL=pages_menu.css.map */
