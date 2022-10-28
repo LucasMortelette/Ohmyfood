@@ -1,3 +1,5 @@
+@use "_keyframes.scss" as *;
+
 %flexcenter{display: flex;
 align-items: center;
 justify-content: center;}
@@ -45,7 +47,7 @@ z-index: 9000;
             animation-delay: 0.3s;
             animation-duration: 2s;
 }
- @-webkit-keyframes bounce-top {
+ /*@-webkit-keyframes bounce-top {
     0% {
       -webkit-transform: translateY(-45px);
               transform: translateY(-45px);
@@ -155,7 +157,7 @@ z-index: 9000;
     z-index: 9000;}
     100%{
         visibility: hidden;}
-}
+}*/
 
 .loader_conteneur{@extend %flexcenter;
 flex-flow: row wrap;
@@ -345,8 +347,9 @@ padding-left: 30px;
 padding: 20px;
 width: 100%;}
 
-.footer_titre{font-family:'Shrikhand';}
-
+.footer_titre a{font-family:'Shrikhand';
+        &:hover{text-decoration: none;}
+}
 footer a{text-decoration: none;
 color: white;
 font-family: 'Roboto';

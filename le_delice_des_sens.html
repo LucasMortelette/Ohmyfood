@@ -5,24 +5,60 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/decccbbdb1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="Sass/pages_menu.css">
+                <!--Liens pour police-->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     </head>
-
+    <body>
     <header>
-        <h1>Ohmyfood</h1>
+        <div class="arrow"><a href="Ohmyfood.html"><i class="fa-solid fa-arrow-left"></i></a></div><a href="Ohmyfood.html"><h1>ohmyfood</h1></a>
     </header>
 
-    <body>
-        <section class="banniere"><img src="images/restaurant1.jpg" alt="Restaurant la palette du goût"></section>
+
+        <section class="banniere"><img src="images/restaurant4.jpg" alt="Restaurant le delice des sens"></section>
 
         <section class="menu">
             <div class="menu_titre"><h2>Le délice des sens</h2>
-             <div class="menu_coeur"><i class="fa-regular fa-heart"></i></div>
+             <div class="menu_coeur">
+                <svg class="coeur_rempli" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="30px" height="30px" viewBox="0 0 544.582 544.582" style="enable-background:new 0 0 544.582 544.582;"
+	 xml:space="preserve">
+<g id="heart_full">
+	<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
+		C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876
+		c27.234,0,244.801-188.267,267.751-258.876C561.595,160.732,521.509,81.631,448.069,57.839z"/>
+</g>
+<defs>
+    <lineargradient id="degrade">
+        <stop offset="0%" stop-color="#9356DC"></stop>
+        <stop offset="100%" stop-color="#FF79DA"></stop>
+    </lineargradient>
+</defs>
+</svg>
+
+<svg class="coeur_vide" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="30px" height="30px" viewBox="0 0 544.582 544.582" style="enable-background:new 0 0 544.582 544.582;"
+	 xml:space="preserve">
+<g id="heart_empty">
+	<path d="M448.069,57.839c-72.675-23.562-150.781,15.759-175.721,87.898C247.41,73.522,169.303,34.277,96.628,57.839
+		C23.111,81.784-16.975,160.885,6.894,234.708c22.95,70.38,235.773,258.876,263.006,258.876
+		c27.234,0,244.801-188.267,267.751-258.876C561.595,160.732,521.509,81.631,448.069,57.839z"/>
+</g>
+</svg>
+             </div>
             </div>
 
+            <div class="bloc_menu">
+
             <div class="menu_entrees">
-                <div class="menu_titre"><h3>Entrées</h3></div>
+                <div class="menu_categ">Entrées</div>
                 <div class="menu_bloc_entrees">
-                    <div class="entrees_1">
+                    <div class="entrees">
                         <div class="plat_prix">
                             <div class="plat">
                                 <div class="plat_titre"><h3>Tartare de thon</h3></div>
@@ -32,9 +68,11 @@
                         </div>
 
                         <div class="icone_check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+
+                        
                     </div>
 
-                    <div class="entrees_2">
+                    <div class="entrees">
                         <div class="plat_prix">
                             <div class="plat">
                                 <div class="plat_titre"><h3>Bouchée de homard croustillant</h3></div>
@@ -44,9 +82,10 @@
                         </div>
 
                         <div class="icone_check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+
                     </div>
 
-                    <div class="entrees_3">
+                    <div class="entrees">
                         <div class="plat_prix">
                             <div class="plat">
                                 <div class="plat_titre"><h3>Velouté de cèpes</h3></div>
@@ -56,14 +95,15 @@
                         </div>
 
                         <div class="icone_check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+
                     </div>
                 </div>
             </div>
 
             <div class="menu_plats">
-                <div class="menu_titre"><h3>Plats</h3></div>
+                <div class="menu_categ">Plats</div>
                 <div class="menu_bloc_plats">
-                    <div class="plats_1">
+                    <div class="plats">
                         <div class="plat_prix">
                             <div class="plat">
                                 <div class="plat_titre"><h3>Poulet rôti aux herbes de Provence</h3></div>
@@ -73,9 +113,10 @@
                         </div>
 
                         <div class="icone_check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+
                     </div>
 
-                    <div class="plat_2">
+                    <div class="plats">
                         <div class="plat_prix">
                             <div class="plat">
                                 <div class="plat_titre"><h3>Langouste rôtie</h3></div>
@@ -85,9 +126,10 @@
                         </div>
 
                         <div class="icone_check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+
                     </div>
 
-                    <div class="palt_3">
+                    <div class="plats">
                         <div class="plat_prix">
                             <div class="plat">
                                 <div class="plat_titre"><h3>Côte de boeuf Angus</h3></div>
@@ -97,14 +139,15 @@
                         </div>
 
                         <div class="icone_check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+
                     </div>
                 </div>
             </div>
 
             <div class="menu_desserts">
-                <div class="menu_titre"><h3>Desserts</h3></div>
+                <div class="menu_categ">Desserts</div>
                 <div class="menu_bloc_desserts">
-                    <div class="desserts_1">
+                    <div class="desserts">
                         <div class="plat_prix">
                             <div class="plat">
                                 <div class="plat_titre"><h3>Farandole de desserts</h3></div>
@@ -114,9 +157,10 @@
                         </div>
 
                         <div class="icone_check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+
                     </div>
 
-                    <div class="desserts_2">
+                    <div class="desserts">
                         <div class="plat_prix">
                             <div class="plat">
                                 <div class="plat_titre"><h3>Crème brulée</h3></div>
@@ -126,28 +170,30 @@
                         </div>
 
                         <div class="icone_check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+
                     </div>
 
-                    <div class="desserts_3">
+                    <div class="desserts">
                         <div class="plat_prix">
                             <div class="plat">
                                 <div class="plat_titre"><h3>Tiramisu</h3></div>
-                                <div class="plat_soustitre"><p>A la noisette</p></div>
+                                <div class="plat_soustitre"><p>À la noisette</p></div>
                             </div>
                             <div class="prix">23€</div>
                         </div>
 
                         <div class="icone_check"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+
                     </div>
                 </div>
             </div>
 
             <button type="button" class="commander">Commander</button>
+        </div>
         </section>
-    </body>
 
     <footer>
-        <div class="footer_titre"><h2>ohmyfood</h2></div>
+        <div class="footer_titre"><a href="Ohmyfood.html">ohmyfood</a></div>
         <div class="footer_liens">
             <div class="footer_lien1">
                 <div class="footer_lien1_icone"><i class="fa-solid fa-utensils"></i></div>
@@ -168,4 +214,5 @@
             </div>
         </div>
      </footer>
+     </body>
 </html>
